@@ -1,0 +1,27 @@
+html
+  body
+    // Page Heading/Breadcrumbs
+    .row
+      .col-lg-12
+        p
+          ol.breadcrumb
+            li
+              a(href='index.html') Home
+            li.active Galary
+    // /.row
+    // Content Row (ng-if='$even && !$last')
+    .row(dir-paginate='galary in galarylist | itemsPerPage: pageSize', current-page='currentPage')
+      .col-md-6
+        a(href='{{ galary.photo.location }}', rel='prettyPhoto', title='WOODEN TILES')
+          img(src='{{ galary.photo.location }}', width='500', height='332', alt='WOODEN TILES')
+        h6.divider {{ galary.title }}
+        p.divider {{ galary.description }}
+      .col-md-6(ng-if='$even && !$last')
+        a(href='{{ galary.photo.location }}', rel='prettyPhoto', title='WOODEN TILES')
+          img(src='{{ galary.photo.location }}', width='500', height='332', alt='WOODEN TILES')
+        h6.divider {{ galary.title }}
+        p.divider {{ galary.description }}
+    p
+      .other-controller(ng-controller='PageController')
+        .text-center
+          dir-pagination-controls(boundary-links='true', on-page-change='pageChangeHandler(newPageNumber)', template-url='views/dirPagination.tpl.html')

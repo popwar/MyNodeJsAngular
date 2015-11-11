@@ -1,0 +1,132 @@
+doctype html
+html(ng-app='myapp')
+  head
+    base(href='/')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Modern Business - Start Bootstrap Template
+    // Bootstrap Core CSS
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    // Custom CSS
+    link(href='css/modern-business.css', rel='stylesheet')
+    link(rel='stylesheet', href='css/style.css')
+    // Custom Fonts
+    link(href='font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    link(href='css/prettyPhoto.css', rel='stylesheet')
+    // jQuery
+    script(type='text/javascript', src='js/jquery.js')
+    // Bootstrap Core JavaScript
+    script(type='text/javascript', src='js/bootstrap.min.js')
+    script(type='text/javascript', src='js/jquery.prettyPhoto.js')
+    script(type='text/javascript', src='js/angular.min.js')
+    script(type='text/javascript', src='js/angular-route.min.js')
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+  body
+    // Navigation
+    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='index.html') Tiles Company
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse(ng-controller='HeaderController')
+          ul.nav.navbar-nav.navbar-right
+            li.active
+              a(href='home') Home
+            li
+              a(href='galary') Galary
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Products
+                b.caret
+              ul.dropdown-menu
+                li(ng-repeat='category in categorylist')
+                  a(href='{{category.url}}')
+                    span(ng-bind='category.name')
+            li
+              a(href='services.html') Services
+            li
+              a(href='contact.html') Contact
+        // /.navbar-collapse
+      // /.container
+    // Page Content
+    #mainarea.container(ng-controller='MyController')
+      div(ng-view='')
+    // /.row
+    hr
+    // Footer
+    .row.footer
+      .col-lg-12
+        .row
+          .col-md-4
+            p(style='color:#9d9d9d') FULI AUS BUILDING MATERIALS
+            p.sidepara(style='color:#9d9d9d')
+              span(style='color:#CFCFFF') Products:
+              a(href='itemBambooFloor.html') BambooFloor
+              | , 
+              a(href='itemCeramicTiles.html') CeramicTiles
+              | , 
+              a(href='itemFloor.html') Floor
+              | , 
+              br
+              a(href='itemPorcelainTiles.html') PorcelainTiles
+              | , 
+              a(href='itemStoneFloor.html') StoneFloor
+              | , 
+              a(href='itemTimberFloor.html') TimberFloor
+          .col-md-4
+            p(style='color:#9d9d9d') Recent Posts
+            p(style='color:#ffffff')
+              a(href='#') Big Sales
+            p(style='color:#ffffff')
+              a(href='#') Check how we work on details!
+          .col-md-4
+            p(style='color:#9d9d9d') Contact Details
+            p.sidepara(style='color:#ffffff')
+              | 3 Fairborne Way 
+              br
+              | Keysborough VIC 3173
+              br
+            p(style='color:#ffffff')
+              i.fa.fa-phone
+              abbr(title='Phone', style='color:#ffffff') Phone
+              | : (03) 9701 8258
+            p(style='color:#ffffff')
+              i.fa.fa-envelope-o
+              abbr(title='Email') Email
+              | : 
+              a(href='mailto:name@example.com') name@example.com
+            ul.list-unstyled.list-inline.list-social-icons
+              li
+                a(href='#')
+                  i.fa.fa-facebook-square.fa-2x
+              li
+                a(href='#')
+                  i.fa.fa-linkedin-square.fa-2x
+              li
+                a(href='#')
+                  i.fa.fa-twitter-square.fa-2x
+              li
+                a(href='#')
+                  i.fa.fa-google-plus-square.fa-2x
+      .col-lg-12
+        p(style='color:#9d9d9d') Copyright © company 2015
+    // /.container
+    script(type='text/javascript', charset='utf-8').
+      $(document).ready(function(){
+      $("a[rel^='prettyPhoto']").prettyPhoto();
+      });
+    script(src='js/index.js')
+    script(src='js/dirPagination.js')

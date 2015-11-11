@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Modern Business - Start Bootstrap Template</title>
+    <!-- Bootstrap Core CSS-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS-->
+    <link href="css/modern-business.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Custom Fonts-->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <!-- jQuery-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript-->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file://-->
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+    script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    -->
+  </head>
+  <body>
+    <!-- Navigation-->
+    <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display-->
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand">Tiles Company</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling-->
+        <div id="bs-example-navbar-collapse-1" ng-controller="HeaderController" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="home">Home</a></li>
+            <li><a href="galary">Galary</a></li>
+            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Products<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li ng-repeat="category in categorylist"><a href="{{category.url}}"><span ng-bind="category.name"></span></a></li>
+            </ul>
+          </li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse-->
+    </div>
+    <!-- /.container-->
+  </nav>
+  <!-- Page Content-->
+  <div id="mainarea" ng-controller="MyController" class="container">
+    <div ng-view=""></div>
+  </div>
+  <!-- /.row-->
+  <hr>
+  <!-- Footer -->
+  <div class="row footer">
+    <div class="col-lg-12">
+      <div class="row">
+        <div class="col-md-4">
+          <p style="color:#9d9d9d">FULI AUS BUILDING MATERIALS</p>
+          <p class="sidepara" style="color:#9d9d9d"><span style="color:#CFCFFF">Products:</span> <a href="itemBambooFloor.html">BambooFloor</a>, <a href="itemCeramicTiles.html">CeramicTiles</a>, <a href="itemFloor.html">Floor</a>, <br><a href="itemPorcelainTiles.html">PorcelainTiles</a>, <a href="itemStoneFloor.html">StoneFloor</a>, <a href="itemTimberFloor.html">TimberFloor</a></p>
+        </div>
+        <div class="col-md-4">
+          <p style="color:#9d9d9d">Recent Posts</p>
+          <p style="color:#ffffff"><a href="#">Big Sales</a></p>
+          <p style="color:#ffffff"><a href="#">Check how we work on details!</a></p>
+        </div>
+        <div class="col-md-4" >
+          <p style="color:#9d9d9d">Contact Details</p>
+          <p class="sidepara" style="color:#ffffff">
+            3 Fairborne Way <br>Keysborough VIC 3173<br>
+          </p>
+          <p style="color:#ffffff"><i class="fa fa-phone"></i>
+          <abbr title="Phone" style="color:#ffffff">Phone</abbr>: (03) 9701 8258</p>
+          <p style="color:#ffffff"><i class="fa fa-envelope-o"></i>
+            <abbr title="Email">Email</abbr>: <a href="mailto:name@example.com">name@example.com</a>
+          </p>
+          <ul class="list-unstyled list-inline list-social-icons">
+            <li>
+              <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-12">
+      <p style="color:#9d9d9d">Copyright &copy; FULI AUS BUILDING MATERIALS 2015</p>
+    </div>
+  </div>
+  <!-- /.container-->
+  <script type="text/javascript" charset="utf-8">
+  $(document).ready(function(){
+  $("a[rel^='prettyPhoto']").prettyPhoto();
+  });
+  </script>
+  <script src="js/index.js"></script>
+  <script src="js/dirPagination.js"></script>
+</body>
+</html>

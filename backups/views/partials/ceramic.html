@@ -1,0 +1,52 @@
+<!-- Page Heading/Breadcrumbs -->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Ceramic Tiles
+        <!-- <small>Subheading</small> -->
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="index.html">Home</a>
+        </li>
+        <li class="active">Ceramic Tiles</li>
+    </ol>
+</div>
+</div>
+<!-- /.row -->
+<!-- Content Row -->
+<div class="row"  ng-controller="CeramicController">
+<!-- Sidebar Column -->
+<div class="col-md-3">
+    <div class="list-group">
+        <span ng-repeat="category in categorylist">
+            <a href="{{category.url}}" class="list-group-item"><span ng-bind="category.name"></span></a>
+        </span>
+    </div>
+    <div class="panel">
+        <h4>Why BAMBOO</h4>
+        <p class="sidepara">Bamboo flooring is an extremely stable hardwood, a true reliable and consistent product.
+            99.5% resistant to termites. And it is healthy, with No toxic fumes.
+        Reasonably prices comparable to hardwood timbers.</p>
+    </div>
+    <div class="panel">
+        <h4>COATING</h4>
+        <p class="sidepara">All our solid Bamboo flooring is protected against insects, rot and mildew during the manufacturing process.
+            The surfaces are pre-finished with 8 layers German manufactured water-based  Polyurethane.
+        The finishes are standard Semi-Gloss or Matt. </p>
+    </div>
+    
+</div>
+<!-- Content Column -->
+<div class="col-md-9">
+    <div class="row" ng-repeat="product in products">
+        <div class="col-md-7" ng-bind="product.name">
+            
+        </div>
+        <div class="col-md-5">
+            <h3>Project One</h3>
+            <h4>Subheading</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+            <a class="btn btn-primary" href="portfolio-item.html">View Project</i></a>
+        </div>
+    </div>
+</div>
+</div>

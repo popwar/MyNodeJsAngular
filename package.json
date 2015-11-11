@@ -1,0 +1,29 @@
+{
+  "name": "fuliweb",
+  "version": "1.0.0",
+  "description": "web for fuli",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/popwar/fuliweb.git"
+  },
+  "dependencies": {
+    "mongojs": "^0.7.5",
+    "jade": "^1.11.0",
+    "express": "^4.13.3",
+    "angular": "^1.4.7"
+  },
+  "keywords": [
+    "npm",
+    "web"
+  ],
+  "author": "Luke Lu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/popwar/fuliweb/issues"
+  },
+  "homepage": "https://github.com/popwar/fuliweb#readme"
+}

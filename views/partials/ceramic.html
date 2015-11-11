@@ -1,0 +1,43 @@
+html
+  body
+    // Page Heading/Breadcrumbs
+    .row
+      .col-lg-12
+        h1.page-header
+          | Ceramic Tiles
+          // <small>Subheading</small>
+        ol.breadcrumb
+          li
+            a(href='index.html') Home
+          li.active Ceramic Tiles
+    // /.row
+    // Content Row
+    .row(ng-controller='CeramicController')
+      // Sidebar Column
+      .col-md-3
+        .list-group
+          span(ng-repeat='category in categorylist')
+            a.list-group-item(href='{{category.url}}')
+              span(ng-bind='category.name')
+        .panel
+          h4 Why BAMBOO
+          p.sidepara
+            | Bamboo flooring is an extremely stable hardwood, a true reliable and consistent product.
+            | 99.5% resistant to termites. And it is healthy, with No toxic fumes.
+            | Reasonably prices comparable to hardwood timbers.
+        .panel
+          h4 COATING
+          p.sidepara
+            | All our solid Bamboo flooring is protected against insects, rot and mildew during the manufacturing process.
+            | The surfaces are pre-finished with 8 layers German manufactured water-based  Polyurethane.
+            | The finishes are standard Semi-Gloss or Matt.
+      // Content Column
+      .col-md-9
+        .row(ng-repeat='product in products')
+          .col-md-7(ng-bind='product.name')
+          .col-md-5
+            h3 Project One
+            h4 Subheading
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.
+            a.btn.btn-primary(href='portfolio-item.html') View Project
